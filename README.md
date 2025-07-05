@@ -16,8 +16,10 @@ In this project i used Medallion Architecture Bronze, Silver and Gold layers:
 3. Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
 ## Objective
-1. **Building the Data Warehouse**
+### Building the Data Warehouse
+
 **Objective**
+
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 **Specifications**
@@ -27,9 +29,13 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - Scope: Focus on the latest dataset only; historization of data is not required.
 - Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
-2. **BI: Analytics & Reporting**
+
+
+### BI: Analytics & Reporting
+
 **Objective**
-Develop SQL-based analytics to deliver detailed insights into:
+
+   Develop SQL-based analytics to deliver detailed insights into:
   - Customer Behavior
   - Product Performance
   - Sales Trends
@@ -52,4 +58,42 @@ Includes:
   - product_info.csv – Operational product data with differing schema (e.g., SKU codes, vendor info)
 
 ## Tools
+- SQL Server
+- Draw.io
+- Excel
+
+## Data Modeling 
+The data warehouse uses a star schema to support business-level reporting and analytics. Dimensional modeling ensures efficient querying and usability across layers.
+
+**Fact Table**
+- fact_sales: Captures each sales transaction including references to customer, product, and location, with measures like revenue and quantity.
+
+**Dimension Tables**
+- dim_customer: Unified customer data from CRM and ERP, including demographics and join info
+- dim_product: Merged product catalog across systems with standardized categories
+
+##  ETL Process Breakdown
+The pipeline follows the Medallion Architecture structure:
+
+🟫 **Bronze Layer**
+- Raw data loaded from CSV files with no transformation
+- Maintains data fidelity for auditing and rollback
+
+🟪 **Silver Layer**
+- Cleansing: Removed duplicates, fixed data types, normalized fields
+- Integration: Combined customer and product records from both CRM and ERP
+- Modeled into structured fact/dim tables for analysis
+
+🟨 **Gold Layer**
+- Business metrics calculated: revenue, sales by region/product/customer
+- Designed for dashboarding and self-serve reporting
+
+## Testing & Validation
+Verified joins with expected record counts across fact/dimension tables
+- Checked NULLs and duplicate keys
+- Cross-validated Gold Layer metrics using pivot tables in Excel
+
+## About-Me
+I’m a data enthusiast with a passion for transforming raw data into meaningful insights that drive business decisions. This project is part of my ongoing journey to deepen my skills in data analytics and engineering. I'm continuously learning and exploring areas like data warehousing, BI tools, and scalable pipeline design.
+
 
