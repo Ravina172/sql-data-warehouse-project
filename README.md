@@ -63,6 +63,7 @@ Includes:
 - Excel
 
 ## Data Modeling 
+![data modeel](https://github.com/Ravina172/sql-data-warehouse-project/blob/main/Docs/data_model1.png)
 The data warehouse uses a star schema to support business-level reporting and analytics. Dimensional modeling ensures efficient querying and usability across layers.
 
 **Fact Table**
@@ -88,6 +89,8 @@ The pipeline follows the Medallion Architecture structure:
 - Business metrics calculated: revenue, sales by region/product/customer
 - Designed for dashboarding and self-serve reporting
 
+![image](https://github.com/Ravina172/sql-data-warehouse-project/blob/main/Docs/data_integration1.png)
+
 ## Testing & Validation
 Verified joins with expected record counts across fact/dimension tables
 - Checked NULLs and duplicate keys
@@ -95,5 +98,20 @@ Verified joins with expected record counts across fact/dimension tables
 
 ## About-Me
 I’m a data enthusiast with a passion for transforming raw data into meaningful insights that drive business decisions. This project is part of my ongoing journey to deepen my skills in data analytics and engineering. I'm continuously learning and exploring areas like data warehousing, BI tools, and scalable pipeline design.
+<p align="left">
+  <a href="https://www.linkedin.com/in/ravina-patidar-474a9b255/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+    </a>
+  <a href="https://yourportfolio.com" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-157A6E?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="Portfolio"/>
+  </a>
+  <a href="https://github.com/ravina172" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://www.kaggle.com/ravinapatidar" target="_blank">
+    <img src="https://img.shields.io/badge/Kaggle-004D99?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle"/>
+  </a>
+</p>
 
 
